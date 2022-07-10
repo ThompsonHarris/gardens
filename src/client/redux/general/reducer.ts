@@ -1,13 +1,16 @@
 import { generalTypes } from './constants';
+import {Garden} from '../types'
 
 export interface GeneralState {
     fetching: boolean;
     error: boolean;
+    gardens: Garden[]
 }
 
 const initialState: GeneralState = {
     fetching: true,
     error: false,
+    gardens: []
 };
 
 export const generalReducer = (state = initialState, action: any) => {
@@ -23,6 +26,7 @@ export const generalReducer = (state = initialState, action: any) => {
                 ...state,
                 fetching: false,
                 error: false,
+                gardens: action.payload
             };
         case generalTypes.GET_DATA_FAILURE:
             return {

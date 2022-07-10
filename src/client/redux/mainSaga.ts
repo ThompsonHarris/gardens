@@ -16,9 +16,10 @@ export interface ResponseGenerator{
 
 export function* fetchDataSaga() {
     try {
-        // fetch data from server
+        const data:ResponseGenerator = yield call(axios.get, '/api/garden');  
+        yield put({ type: generalTypes.GET_DATA_SUCCESS, payload: data.data });
     } catch (e) {
-        // handle error
+        yield put({ type: generalTypes.GET_DATA_FAILURE, payload: e });
     }
 }
 

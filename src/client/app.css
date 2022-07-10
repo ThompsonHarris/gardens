@@ -123,3 +123,18 @@ table {
   border-spacing: 0;
 }
 /* CSS reset */
+
+:root {
+  --lightGreen: #5c8c6c;
+  --darkGreen: #1d4d3d;
+  --orange: #a74f22;
+  --brown: #4c312d;
+  --black: #20212e;
+  --grey: #58595b;
+  font-family: 'Signika', sans-serif;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
