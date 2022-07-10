@@ -64,8 +64,6 @@ const seed = async () => {
         zipcode: "10009",
         memberlimit: "0",
       });
-    await garden1.addMember(member1);
-    await garden2.addMember(member2);
     console.log(`Successful seeding in garden database.`);
     await process.exit(0);
   } catch (e) {

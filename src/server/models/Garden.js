@@ -39,13 +39,13 @@ const Garden = db.define("garden", {
   },
 });
 
-Garden.prototype.addMember = async function (member) {
+Garden.prototype.addMember = async function (memberId) {
   try {
     const { members } = await Garden.findByPk(this.id, { include: Member });
     if (members.length < this.memberlimit) {
       await GardenMember.create({
         gardenId: this.id,
-        memberId: member.id,
+        memberId: memberId,
       });
       return { status: "success", message: "member added" };
     } else {
