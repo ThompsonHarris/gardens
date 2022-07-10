@@ -22,7 +22,7 @@ if (process.env.DATABASE_URL) {
 }
 
 const db = new sequelize(
-  process.env.DATABASE_URL || 'postgres://localhost:5432/?',
+  process.env.DATABASE_URL || 'postgres://localhost:5432/garden',
   config
 );
 
