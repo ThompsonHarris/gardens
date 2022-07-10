@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/js/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "moduleResolution": "node",
+        "target": "es5",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "lib":[
+            "es2015", "dom"
+        ],
+        "typeRoots": ["src/client/types"],
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
