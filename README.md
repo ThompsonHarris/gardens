@@ -1,5 +1,5 @@
-# INDEED take home assessment
-This is an Indeed take home assessment.
+# Mock CRUD Application
+This is an Mock Crud Application.
 
 ## Running the project
 First clone this repo and run `npm i`.
